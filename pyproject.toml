@@ -32,5 +32,37 @@ build-backend = "setuptools.build_meta"
 [dependency-groups]
 dev = [
     "pre-commit>=4.6.0",
+    "ruff>=0.15.16",
 ]
 
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "C90", # mccabe (complexité cyclomatique)
+    "S",   # flake8-bandit (sécurité de base)
+    "UP",  # pyupgrade (modernisation Python 3.12+)
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 7
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pyright]
+typeCheckingMode = "standard"
+include = ["packages/mini_me"]
+reportMissingTypeStubs = "warning"
+reportUnknownArgumentType = "warning"
+reportUnknownVariableType = "warning"
+reportUnusedImport = "error"
+venvPath = "."
+venv = ".venv"
