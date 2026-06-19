@@ -1,0 +1,9 @@
+# Secrets
+.env
+
+# Environement
+__pycache__/
+mini_me.egg-info/
+
+# Pas pret
+packages/main.py
