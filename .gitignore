@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Environement
+__pycache__/
+mini_me.egg-info/
+packages/.langgraph_api/
+.venv/
+
+# Pas pret
+packages/main.py
+
+# Documentation localle
+AGENTS.md
+OPENCODE.md
+ARCHITECTURE.md
