@@ -1,0 +1,8 @@
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
+        name: Gitleaks (Détection de secrets)
+        description: Détecte les secrets, clés d'API et mots de passe avant le commit.
+        entry: gitleaks protect --staged --verbose
