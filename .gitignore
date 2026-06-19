@@ -4,6 +4,7 @@
 # Environement
 __pycache__/
 mini_me.egg-info/
+packages/.langgraph_api/
 
 # Pas pret
 packages/main.py
